@@ -6,7 +6,7 @@
  *
  * Description: This is a simple C program
  * it prints a message using the puts function
- * Return 0 on successful execution.
+ * Return: 0 on successful execution.
  */
 int main(void)
 {
