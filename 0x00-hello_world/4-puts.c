@@ -2,7 +2,7 @@
 
 /**
  * main - puts a simple message
- * @void - return  type is void
+ * @void: return  type is void
  *
  * Description: This is a simple C program
  * it prints a message using the puts function
