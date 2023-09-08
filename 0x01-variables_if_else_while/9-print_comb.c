@@ -16,21 +16,14 @@ int main(void)
 		putchar(i + '0');
 		if (i < 9)
 		{
-			int j;
-			for (j = 44; j >31; j--)
-			{
-				if (j == 32 || j == 44)
-				{
-					putchar(j);
-				}
-			}	
+			putchar(',');
+			putchar(' ');
 		}
 		else
 		{
 			continue;
 		}
 	}
-	putchar('$');
 	putchar('\n');
 	return (0);
 }
