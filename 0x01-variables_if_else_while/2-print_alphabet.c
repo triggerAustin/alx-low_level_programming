@@ -10,7 +10,7 @@
 int main(void)
 {
 	char c; /*initialize char c*/
-	for (c = 'a'; c <= 'z'; c++)/* initialize char c to ascii a and increamnet until = to ascii z*/
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
