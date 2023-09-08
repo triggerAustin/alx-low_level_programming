@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * This is a simple C program that prints a message.
+ * main - puts a simple message
  *
- * @return 0 on successful execution.
+ * Description: This is a simple C program that prints a message using the puts function
+ * Return 0 on successful execution.
  */
 int main(void)
 {
