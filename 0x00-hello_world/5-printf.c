@@ -7,7 +7,7 @@
  * Description: uses printf to output msg
  * Return: 0 when execute successfully
  */
-int main (void)
+int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
