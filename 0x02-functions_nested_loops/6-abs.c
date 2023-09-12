@@ -2,7 +2,7 @@
 
 /**
  * _abs - gets the absolute value of an integer
- * @int: integer to be checked
+ * @a: integer to be checked
  *
  * Return: the value of a
  */
