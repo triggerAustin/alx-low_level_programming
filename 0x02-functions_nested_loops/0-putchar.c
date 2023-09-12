@@ -2,7 +2,7 @@
 
 /**
  * main -  start of programme
- * @Void: main return type
+ * @void: main return type
  *
  * Return: 0 if sucssesful
  */
