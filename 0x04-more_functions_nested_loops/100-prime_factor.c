@@ -2,9 +2,12 @@
 #include <math.h>
 
 /**
+ *main -  start of program
+ * @void: no arguments accepted
  *
+ * Return: 0if success
  */
-int main()
+int main(void)
 {
 	long i;
 	long number = 612852475143;
@@ -31,5 +34,5 @@ int main()
 	}
 
 	printf("%ld\n", largestPrime);
-	return 0;
+	return (0);
 }
