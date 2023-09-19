@@ -9,21 +9,30 @@
 void print_array(int *a, int n)
 {
 	int i;
+	size_t j;
+
+	j = n;
 
 	if (n <= 0)
 	{
 		printf(" ");
 	}
-
-	for (i = 0; i < n; i++)
+	else if (j > sizeof(a))
 	{
-		if (i < n)
+		printf(" ");
+	}
+	else
+	{
+		for (i = 0; i < n; i++)
 		{
-			printf("%d, ", a[i]);
-		}
-		else
-		{
-			printf("%d", a[i]);
+			if (i < n)
+			{
+				printf("%d, ", a[i]);
+			}
+			else
+			{
+				printf("%d", a[i]);
+			}
 		}
 	}
 	printf("\n");
