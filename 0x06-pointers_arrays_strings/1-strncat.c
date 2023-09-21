@@ -2,7 +2,10 @@
 #include <stdio.h>
 
 /**
- *
+ * _strncat - concatanates two strings
+ * @dest: destination string
+ * @src: string to be concatanated
+ * Return: final string
  */
 char *_strncat(char *dest, char *src, int n)
 {
