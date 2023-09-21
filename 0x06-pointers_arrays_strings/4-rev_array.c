@@ -1,15 +1,20 @@
 #include "main.h"
 
 /**
- *
+ * reverse_array - reverses an array
+ * Description: uses atemp int to store values and swapvalues at index i with
+ * at index j
+ * @a: array
+ * @n: array size
  */
 void reverse_array(int *a, int n)
 {
-	int *rev_arr[98];
-	int i;
+	int temp, j, i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0, j = n - 1; i < j; i++, j--)
 	{
-		*rev_arr[-i] = a[i];
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 	}
 }
