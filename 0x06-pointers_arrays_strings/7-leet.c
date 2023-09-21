@@ -2,7 +2,9 @@
 #include "stdio.h"
 
 /**
- *
+ * leet - prints leet value of char
+ * Description: converts a,A,E,e,o,O,T,t,L,l into let counterparts
+ * @str: string to convert to 1337
  *
  */
 char *leet(char *str)
@@ -10,7 +12,7 @@ char *leet(char *str)
 	int i;
 	char *org_str = str;
 	char leetmap[128];
-	
+
 	leetmap['a'] = '4';
 	leetmap['A'] = '4';
 	leetmap['e'] = '3';
