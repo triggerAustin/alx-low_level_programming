@@ -23,6 +23,7 @@ char *leet(char *str)
 	leetmap['L'] = '1';
 	leetmap['t'] = '7';
 	leetmap['T'] = '7';
+	leetmap[' '] = ' ';
 
 
 	for (i = 0; str[i] != '\0'; i++)
