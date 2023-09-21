@@ -2,10 +2,11 @@
 #include <stdio.h>
 
 /**
- * _strncpy  copys n characters from src to dest
- * @dest: destination to copy to 
+ * _strncpy - copys n characters from src to dest
+ * @dest: destination to copy to
  * @src: strng to be copied
  * @n: number of characters to be copied
+ * Return: copied string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
