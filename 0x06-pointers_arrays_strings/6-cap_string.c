@@ -26,7 +26,7 @@ char *cap_string(char *str)
 		}
 
 
-		if (str[i] == '.' || str[i] == ' ' || (str[i] >= 48 && str[i] <= 57))
+		if (str[i] == '.' || str[i] == ' ')
 		{
 			if (str[i + 1] >= 97 && str[i + 1] <= 122)
 			{
