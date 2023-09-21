@@ -3,7 +3,8 @@
 
 /**
  * cap_string - converts the first letter of each word to cap
- * Description: it takes a string and converts every letter after a space 
+ * Description: it takes a string and converts every letter
+ * after a space
  * or period or escape character into a cap letter
  * @str: string to be capitalized
  * Return: the string
@@ -15,12 +16,13 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == '\t' || str[i] == '\n' || str[i] == '\r' || str[i] == '\"' || str[i] == '\'')
+		if (str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
+				|| str[i] == '\"' || str[i] == '\'')
 		{
 			if (str[i + 1] >= 97 && str[i + 1] <= 122)
 			{
 				str[i + 1] -= 32;
-			} 
+			}
 		}
 
 
@@ -29,7 +31,7 @@ char *cap_string(char *str)
 			if (str[i + 1] >= 97 && str[i + 1] <= 122)
 			{
 				str[i + 1] -= 32;
-			
+
 			}
 		}
 	}
