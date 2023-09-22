@@ -2,70 +2,27 @@
 #include "stdio.h"
 
 /**
- * leet - prints leet value of char
- * Description: converts a,A,E,e,o,O,T,t,L,l into let counterparts
- * @str: string to convert to 1337
+ * rot13 - prints str according to rot13 encryption
+ * Description: encodes str into rot13 counterparts
+ * @str: string to convert to EBG13
  * Return: the new string
  */
 char *rot13(char *str)
 {
 	int i;
 	char *org_str = str;
-	char rotmap[128] = {0};
+	char rotmap[128] = {['a'] = 'n', ['b'] = 'o', ['c'] = 'p',
+	['d'] = 'q', ['e'] = 'r', ['f'] = 's', ['g'] = 't', ['h'] = 'u',
+	['i'] = 'v', ['j'] = 'w', ['k'] = 'x', ['l'] = 'y', ['m'] = 'z',
+	['n'] = 'a', ['o'] = 'b', ['p'] = 'c', ['q'] = 'd', ['r'] = 'e',
+	['s'] = 'f', ['t'] = 'g', ['u'] = 'h', ['v'] = 'i', ['w'] = 'j',
+	['x'] = 'k', ['y'] = 'l', ['z'] = 'm', ['A'] = 'N', ['B'] = 'O',
+	['C'] = 'P', ['D'] = 'Q', ['E'] = 'R', ['F'] = 'S', ['G'] = 'T',
+	['H'] = 'U', ['I'] = 'V', ['J'] = 'W', ['K'] = 'X', ['L'] = 'Y',
+	['M'] = 'Z', ['N'] = 'A', ['O'] = 'B', ['P'] = 'C', ['Q'] = 'D',
+	['R'] = 'E', ['S'] = 'F', ['T'] = 'G', ['U'] = 'H', ['V'] = 'I',
+	['W'] = 'J', ['X'] = 'K', ['Y'] = 'L', ['Z'] = 'M'};
 
-	rotmap['a'] = 'n';
-	rotmap['b'] = 'o';
-	rotmap['c'] = 'p';
-	rotmap['d'] = 'q';
-	rotmap['e'] = 'r';
-	rotmap['f'] = 's';
-	rotmap['g'] = 't';
-	rotmap['h'] = 'u';
-	rotmap['i'] = 'v';
-	rotmap['j'] = 'w';
-	rotmap['k'] = 'x';
-	rotmap['l'] = 'y';
-	rotmap['m'] = 'z';
-	rotmap['n'] = 'a';
-	rotmap['o'] = 'b';
-	rotmap['p'] = 'c';
-	rotmap['q'] = 'd';
-	rotmap['r'] = 'e';
-	rotmap['s'] = 'f';
-	rotmap['t'] = 'g';
-	rotmap['u'] = 'h';
-	rotmap['v'] = 'i';
-	rotmap['w'] = 'j';
-	rotmap['x'] = 'k';
-	rotmap['y'] = 'l';
-	rotmap['z'] = 'm';
-	rotmap['A'] = 'N';
-	rotmap['B'] = 'O';
-	rotmap['C'] = 'P';
-	rotmap['D'] = 'Q';
-	rotmap['E'] = 'R';
-	rotmap['F'] = 'S';
-	rotmap['G'] = 'T';
-	rotmap['H'] = 'U';
-	rotmap['I'] = 'V';
-	rotmap['J'] = 'W';
-	rotmap['K'] = 'X';
-	rotmap['L'] = 'Y';
-	rotmap['M'] = 'Z';
-	rotmap['N'] = 'A';
-	rotmap['O'] = 'B';
-	rotmap['P'] = 'C';
-	rotmap['Q'] = 'D';
-	rotmap['R'] = 'E';
-	rotmap['S'] = 'F';
-	rotmap['T'] = 'G';
-	rotmap['U'] = 'H';
-	rotmap['V'] = 'I';
-	rotmap['W'] = 'J';
-	rotmap['X'] = 'K';
-	rotmap['Y'] = 'L';
-	rotmap['Z'] = 'M';
-	
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (rotmap[(unsigned char) str[i]] != '\0')
