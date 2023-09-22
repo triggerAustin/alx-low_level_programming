@@ -18,8 +18,12 @@ char *cap_string(char *str)
 	{
 		if (i == 0)
 		{
-			continue;
+			if (str[i + 1] >= 97 && str[i + 1] <= 122)
+			{
+				str[i] -= 32;
+			}
 		}
+
 		if (str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
 				|| str[i] == '\"' || str[i] == '\''
 				|| str[i] == '\0' || str[i] == '\?')
