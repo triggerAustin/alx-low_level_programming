@@ -16,6 +16,10 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		if (i == 0)
+		{
+			continue;
+		}
 		if (str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
 				|| str[i] == '\"' || str[i] == '\''
 				|| str[i] == '\0' || str[i] == '\?')
