@@ -5,7 +5,7 @@
  * leet - prints leet value of char
  * Description: converts a,A,E,e,o,O,T,t,L,l into let counterparts
  * @str: string to convert to 1337
- *
+ * Return: the new string
  */
 char *leet(char *str)
 {
