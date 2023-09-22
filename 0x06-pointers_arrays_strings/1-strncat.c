@@ -31,13 +31,13 @@ char *_strncat(char *dest, char *src, int n)
 		}
 		else
 		{
-			while (i < n)
+			if (i < n)
 			{
 				*dest = *src;
-				i++;
 			}
 		}
-
+		
+		i++;
 		src++;
 		dest++;
 	}
