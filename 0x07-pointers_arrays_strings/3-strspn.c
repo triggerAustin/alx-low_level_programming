@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- *
+ * _strspn - checks whether characters in s are in accept
+ * @s: string to check
+ * @accept: string to compare
+ * Return: number of bytes
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -14,7 +17,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*acc != '\0')
 	{
-		flag ++;
+		flag++;
 		acc++;
 	}
 
