@@ -2,9 +2,9 @@
 
 /**
  * _strlen_recursion - prints the length of a string recursively
- * @s: string 
+ * @s: string
  * Description: each recursive call adds the output of the fn to i
- * Return: value of i 
+ * Return: value of i
  */
 int _strlen_recursion(char *s)
 {
