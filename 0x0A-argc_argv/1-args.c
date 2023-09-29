@@ -4,6 +4,7 @@
  * main - prints number of args in a program
  * @argc: argument count
  * @argv: argument vector
+ * Return: 0 if success
  */
 int main(int argc, char *argv[])
 {
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < j && *argv[i] != '\0'; i++)
 	{
-		count++;	
+		count++;
 	}
 	printf("%d\n", count - 1);
 	return (0);
