@@ -16,6 +16,12 @@ char *create_array(unsigned int size, char c)
 	if (size > 0)
 	{
 		str = malloc(sizeof(char) * size);
+		
+		if (str == NULL)
+		{
+			printf("Not enough memory");
+			return (NULL);
+		}
 
 		for (i = 0; i < size; i++)
 		{
@@ -26,12 +32,7 @@ char *create_array(unsigned int size, char c)
 	else
 	{
 		return (NULL);
-	}
-	if (str == NULL)
-	{
-		printf("Not enough memory left\n");
-		return (NULL);
-	}
+	}	
 
 	return (str);
 }
