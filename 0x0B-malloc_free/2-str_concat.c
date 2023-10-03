@@ -69,7 +69,7 @@ char *str_concat(char *s1, char *s2)
 		len2++;
 	}
 
-	con_str = malloc((sizeof(s1)) * sizeof(char));
+	con_str = malloc(len + len2) * sizeof(char));
 
 	if (con_str == NULL)
 	{
