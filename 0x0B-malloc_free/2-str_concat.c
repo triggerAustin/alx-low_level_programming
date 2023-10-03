@@ -13,8 +13,8 @@ char *concate(char *str1, char *str2, int i, int j)
 {
 	int k, l;
 	char *concate_str;
-
-	concate_str = malloc((i + j + 1) * sizeof(char));
+	
+	concate_str = malloc((i + j) * sizeof(char));
 
 	if (concate_str == NULL)
 	{
@@ -44,7 +44,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int len, len2;
 	char *org_s2, *org_s1;
-	char *con_str;
 
 	org_s1 = s1;
 	org_s2 = s2;
@@ -68,14 +67,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		len2++;
 	}
-
-	con_str = malloc((len + len2) * sizeof(char));
-
-	if (con_str == NULL)
-	{
-		return (NULL);
-	}
-	con_str = concate(org_s1, org_s2, len2, len);
-
-	return (con_str);
+	
+	return (concate(org_s1, org_s2, len2, len));
 }
