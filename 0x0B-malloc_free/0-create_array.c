@@ -29,6 +29,7 @@ char *create_array(unsigned int size, char c)
 	}
 	if (str == NULL)
 	{
+		printf("Not enough memory left\n");
 		return (NULL);
 	}
 
