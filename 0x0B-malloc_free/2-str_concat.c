@@ -13,8 +13,8 @@ char *concate(char *str1, char *str2, int i, int j)
 {
 	int k, l;
 	char *concate_str;
-	
-	concate_str = malloc((i + j) * sizeof(char));
+
+	concate_str = malloc((i + j + 1) * sizeof(char));
 
 	if (concate_str == NULL)
 	{
@@ -67,6 +67,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		len2++;
 	}
-	
+
 	return (concate(org_s1, org_s2, len2, len));
 }
