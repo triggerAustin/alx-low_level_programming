@@ -59,19 +59,17 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	while (*s2 != '\0')
+	while (s2[len] != '\0')
 	{
 		len++;
-		s2++;
 	}
 
-	while (*s1 != '\0')
+	while (s1[len2] != '\0')
 	{
 		len2++;
-		s1++;
 	}
 
-	con_str = malloc((len + len2) * sizeof(char));
+	con_str = malloc((sizeof(s1)) * sizeof(char));
 
 	if (con_str == NULL)
 	{
