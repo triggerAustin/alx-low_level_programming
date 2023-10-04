@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 /**
- * main - multiplies two arguments 
+ * main - multiplies two arguments
  * @argv: argument vector
  * @argc: argument count
  * Return: 1 if error 0 if success
