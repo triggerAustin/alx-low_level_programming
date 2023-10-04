@@ -11,32 +11,15 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	if (argc == 3)
-	{
-		for (i = 0; argv[1][i] != '\0'; i++)
-		{
-			if (!(isdigit(argv[1][i]) || argv[1][i] == '-'))
-			{
-				printf("ERROR not digit\n");
-				return (1);
-			}
-		}
-		for (i = 0; argv[2][i] != '\0'; i++)
-		{
-			if (!(isdigit(argv[2][i]) || argv[2][i] == '-'))
-			{
-				printf("ERROR not digit\n");
-				return (1);
-			}
-		}
-	}
-	else
+	if (argc != 3)
 	{
 		printf("ERROR\n");
 		return (1);
 	}
-
-	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	else
+	{
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	}
 
 	return (0);
 }
