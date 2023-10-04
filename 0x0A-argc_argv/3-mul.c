@@ -15,17 +15,17 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; argv[1][i] != '\0'; i++)
 		{
-			if (!isdigit(argv[1][i]))
+			if (!(isdigit(argv[1][i]) || argv[1][i] == '-'))
 			{
-				printf("ERROR\n");
+				printf("ERROR not digit\n");
 				return (1);
 			}
 		}
 		for (i = 0; argv[2][i] != '\0'; i++)
 		{
-			if (!isdigit(argv[2][i]))
+			if (!(isdigit(argv[2][i]) || argv[2][i] == '-'))
 			{
-				printf("ERROR\n");
+				printf("ERROR not digit\n");
 				return (1);
 			}
 		}
