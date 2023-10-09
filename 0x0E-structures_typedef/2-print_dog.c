@@ -34,8 +34,4 @@ void print_dog(struct dog *d)
 			printf("Owner: (nil)\n");
 		}
 	}
-	else
-	{
-		exit(1);
-	}
 }
