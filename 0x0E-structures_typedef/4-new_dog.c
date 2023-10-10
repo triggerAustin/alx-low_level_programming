@@ -27,8 +27,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 		if (name_ != NULL && owner_ != NULL)
 		{
-			strcpy(name_, name);
-			strcpy(owner_, owner);
+			strcpy(*name_, name);
+			strcpy(*owner_, owner);
 		
 			new_dog->name = name_;
 			new_dog->age = age;
