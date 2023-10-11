@@ -9,9 +9,10 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	char *Name;
-
-	Name = malloc(sizeof(name));
-	Name = name;
-	f(Name);
+	int i;
+	
+	if (name != NULL && f != NULL)
+	{
+		f(name);
+	}
 }
