@@ -1,10 +1,11 @@
 #include "function_pointers.h"
 
-/*
+/**
  * int_index - performs an action on array elem based on function param
  * @array: array to be worked on
  * @size:size of array
  * @cmp: function to work on array
+ * Return: the integer
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -12,11 +13,12 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int ans;
 
 	ans = 0;
-
-	for (i = 0; i < size; i++)
+	if (array != NULL && cmp != NULL)
 	{
-		ans = cmp(array[i]);					
+		for (i = 0; i < size; i++)
+		{
+			ans = cmp(array[i]);
+		}
 	}
-
 	return (ans);
 }
