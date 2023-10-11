@@ -23,14 +23,12 @@ int int_index(int *array, int size, int (*cmp)(int))
 		{
 			for (i = 0; i < size; i++)
 			{
+				ans = -1;
+
 				if (cmp(array[i]))
 				{
 					ans = i;
 					break;
-				}
-				else
-				{
-					ans = -1;
 				}
 			}
 		}
