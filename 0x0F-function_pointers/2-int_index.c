@@ -13,13 +13,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int ans;
 
 	ans = 0;
-	if (size <= 0)
+
+	if (array != NULL && cmp != NULL)
 	{
-		ans = -1;
-	}
-	else
-	{
-		if (array != NULL && cmp != NULL)
+		if (size <= 0)
 		{
 			ans = -1;
 
