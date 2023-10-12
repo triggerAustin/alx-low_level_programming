@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 	else if (argc != 4)
 	{
 		printf("ERROR\n");
+		exit(98);
 	}
 	return (0);
 }

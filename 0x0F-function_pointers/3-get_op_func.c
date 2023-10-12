@@ -29,9 +29,10 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (strcmp(ptr[i].op, s) == 0)
 		{
-			break;
+			return (ptr[i].f);
 		}
 		i++;
 	}
-	return (ptr[i].f);
+	printf("ERROR\n");
+	exit(99);
 }

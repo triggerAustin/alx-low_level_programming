@@ -54,7 +54,8 @@ int op_div(int a, int b)
 	}
 	else
 	{
-		div = 0;
+		printf("ERROR\n");
+		exit(100);
 	}
 	return (div);
 }
@@ -77,7 +78,8 @@ int op_mod(int a, int b)
 	}
 	else
 	{
-		mod = 0;
+		printf("ERROR\n");
+		exit(100);
 	}
 	return (mod);
 }
