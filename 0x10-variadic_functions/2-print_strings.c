@@ -5,7 +5,9 @@
 #include <ctype.h>
 
 /**
- *
+ * print_strings - prints strings
+ * @separator: ,
+ * @n: number of args
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -19,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n;)
 	{
 		str = va_arg(args, char *);
-		
+
 		if (str != NULL)
 		{
 			for (j = 0; str[j] != '\0'; j++)
