@@ -6,14 +6,15 @@
 
 /**
  * print_strings - prints strings
- * Description - takes the arg and checks whether they are strings or ints and prints strings only
+ * Description - takes the arg and checks whether they are strings
+ * or ints and prints strings only
  * @separator: seperates the strings
  * @n: number of passed arguments
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	int flag, j;
+	int flag;
 	char *str;
 	va_list args;
 
@@ -23,17 +24,23 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(args, char *);
 
-		for (j = 0; str[j] != '\0'; j++)
+		if (str != NULL)
 		{
-			if (!isdigit(str[j]))
+			flag = check(str);
+
+			if (flag == 1)
 			{
-				flag = 1;
-				break;
+				printf("%s", str);
+
+				if (i < (n - 1) && separator != NULL)
+				{
+					printf("%s ", separator);
+				}
 			}
 		}
-		if (flag == 1)
+		else
 		{
-			printf("%s", str);
+			printf("(nil)");
 
 			if (i < (n - 1) && separator != NULL)
 			{
@@ -44,4 +51,28 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	printf("\n");
 	va_end(args);
+}
+
+/**
+ * check - checks whether values in a str are ints or strings
+ * @s: string
+ * Return: flag value
+ */
+int check(char *s)
+{
+	int k, j;
+
+	for (j = 0; s[j] != '\0'; j++)
+	{
+		if (!isdigit(s[j]))
+		{
+			k = 1;
+		}
+		else
+		{
+			k = 0;
+			break;
+		}
+	}
+	return (k);
 }
