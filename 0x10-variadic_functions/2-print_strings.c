@@ -5,7 +5,10 @@
 #include "variadic_functions.h"
 
 /**
- *
+ * print_strings - prints strings
+ * Description - takes the arg and checks whether they are strings or ints and prints strings only
+ * @separator: seperates the strings
+ * @n: number of passed arguments
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
