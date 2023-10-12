@@ -28,10 +28,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (!isdigit(str[j]))
 			{
 				flag = 1;
-			}
-			else
-			{
-				flag = 0;
 				break;
 			}
 		}
