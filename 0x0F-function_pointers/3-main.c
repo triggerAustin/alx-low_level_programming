@@ -4,9 +4,11 @@
 #include <stdlib.h>
 
 /**
- * main - takes in cl arguments and passes them to 
+ * main - takes in cl arguments and passes them to
  * get_op_func which returns a pointer to a fn
  * and then calls that function on the arguments
+ * @argc: argument count
+ * @argv: argument vector
  * Return: results
  */
 int main(int argc, char *argv[])
@@ -18,7 +20,7 @@ int main(int argc, char *argv[])
 		printf("ERROR\n");
 		exit(98);
 	}
-	
+
 	n1 = atoi(argv[1]);
 	n2 = atoi(argv[3]);
 

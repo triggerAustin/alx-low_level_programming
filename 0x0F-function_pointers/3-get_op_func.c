@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 /**
- * get_op_func - pointer to a function that calls 
+ * get_op_func - pointer to a function that calls
  * another funciton based on value of s
  * @s: operator
  * Return: a pointer to a function based on s
