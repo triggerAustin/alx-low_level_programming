@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int ans, (*fn)(int, int), n1, n2;
+	int (*fn)(int, int), n1, n2;
 
 	if (argc != 4)
 	{
@@ -22,18 +22,18 @@ int main(int argc, char *argv[])
 	n1 = atoi(argv[1]);
 	n2 = atoi(argv[3]);
 
-	ans = fn(argv[2]);
+	fn = get_op_func(argv[2]);
 
 	if (!fn)
 	{
 		printf("ERROR\n");
 		exit(99);
 	}
-	if (!a2 && (argv[2][0] == '/' || argv[2][0] == '%'))
+	if (!n2 && (argv[2][0] == '/' || argv[2][0] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", ans(n1, n2));
+	printf("%d\n", fn(n1, n2));
 	return (0);
 }
