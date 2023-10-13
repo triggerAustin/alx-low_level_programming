@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
-		n1 = argv[1];
-		n2 = argv[3];
+		n1 = atoi(argv[1]);
+		n2 = atoi(argv[3]);
 		fn = get_op_func(argv[2]);
 			
 		if (fn != NULL)
 		{
-			ans = fn(atoi(n1), atoi(argv[n2]));
+			ans = fn(n1, n2);
 			printf("%d\n", ans);
 		}
 		else
