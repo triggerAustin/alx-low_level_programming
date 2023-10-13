@@ -22,17 +22,15 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	op_t *ptr = ops;
 	i = 0;
 
-	while (i < 6)
+	while (i < 5)
 	{
-		if (strcmp(ptr[i].op, s) == 0)
+		if (s && s[0] == ops[i].op[0] && !s[1])
 		{
-			return (ptr[i].f);
+			return (ops[i].f);
 		}
 		i++;
 	}
-	printf("ERROR\n");
-	exit(99);
+	return (NULL);
 }
