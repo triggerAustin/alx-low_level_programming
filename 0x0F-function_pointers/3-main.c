@@ -13,27 +13,27 @@ int main(int argc, char *argv[])
 {
 	int ans, (*fn)(int, int), n1, n2;
 
-	if (argc == 4)
-	{
-		n1 = atoi(argv[1]);
-		n2 = atoi(argv[3]);
-		fn = get_op_func(argv[2]);
-			
-		if (fn != NULL)
-		{
-			ans = fn(n1, n2);
-			printf("%d\n", ans);
-		}
-		else
-		{
-			printf("ERROR\n");
-			exit(99);
-		}
-	}
-	else
+	if (argc != 4)
 	{
 		printf("ERROR\n");
 		exit(98);
 	}
+	
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
+
+	ans = fn(argv[2]);
+
+	if (!fn)
+	{
+		printf("ERROR\n");
+		exit(99);
+	}
+	if (!a2 && (argv[2][0] == '/' || argv[2][0] == '%'))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", ans(n1, n2));
 	return (0);
 }
