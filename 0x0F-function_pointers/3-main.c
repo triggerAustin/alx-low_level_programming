@@ -1,38 +1,34 @@
 #include "3-calc.h"
 
 /**
- * main - takes in cl arguments and passes them to
- * get_op_func which returns a pointer to a fn
- * and then calls that function on the arguments
- * @argc: argument count
- * @argv: argument vector
- * Return: results
+ * main - a program that performs simple operations.
+ * @argc: argc's number
+ * @argv: argv argument
+ * Return: always (0)
  */
 int main(int argc, char *argv[])
 {
-	int (*fn)(int, int), n1, n2;
+	int (*cal)(int, int), a1, a2;
 
 	if (argc != 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(98);
 	}
+	a1 = atoi(argv[1]);
+	a2 = atoi(argv[3]);
 
-	n1 = atoi(argv[1]);
-	n2 = atoi(argv[3]);
-
-	fn = get_op_func(argv[2]);
-
-	if (!fn)
+	cal = get_op_func(argv[2]);
+	if (!cal)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
-	if (!n2 && (argv[2][0] == '/' || argv[2][0] == '%'))
+	if (!a2 && (argv[2][0] == '/' || argv[2][0] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", fn(n1, n2));
+	printf("%d\n", cal(a1, a2));
 	return (0);
 }

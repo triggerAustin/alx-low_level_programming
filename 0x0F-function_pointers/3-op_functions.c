@@ -1,10 +1,10 @@
 #include "3-calc.h"
 
 /**
- * op_add - adds two integers
- * @a: first integer
- * @b: second integer
- * Return: sum
+ * op_add - calculates the sum
+ * @a: integer one
+ * @b: integer two
+ * Return: sum of a and b
  */
 int op_add(int a, int b)
 {
@@ -12,10 +12,10 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - returns the difference of two ints
- * @a: first int
- * @b: second int
- * Return: diff
+ * op_sub - calculates the difference
+ * @a: integer one
+ * @b: integer two
+ * Return: difference of a and b
  */
 int op_sub(int a, int b)
 {
@@ -23,10 +23,10 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - multiplies two ints
- * @a: first int
- * @b: second in
- * Return: the product
+ * op_mul - calculates the product
+ * @a: integer one
+ * @b: integer two
+ * Return: product of a and b
  */
 int op_mul(int a, int b)
 {
@@ -34,10 +34,10 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - divides two ints
- * @a: first int
- * @b: second int
- * Return: returns a/b
+ * op_div - calculates the division
+ * @a: integer one
+ * @b: integer two
+ * Return: result of the division of a and b
  */
 int op_div(int a, int b)
 {
@@ -45,10 +45,10 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - gets the modulous of two ints
- * @a: first int
- * @b: second int
- * Return: return modulous of a and b
+ * op_mod - calculates the remainder of the division
+ * @a: integer one
+ * @b: integer two
+ * Return: remainder of a divided b
  */
 int op_mod(int a, int b)
 {
