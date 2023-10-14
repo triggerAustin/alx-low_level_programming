@@ -1,50 +1,49 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * string_nconcat - function that concatenates two strings.
- * @s1: first string
- * @s2: second string
- * @n: number of bytes from second string
- * Return: pointer to a newly allocated space in memory
+ * string_nconcat - Concatenates two strings.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes of s2 to concatenate.
+ *
+ * Return: A pointer to the concatenated string.
+ *         If memory allocation fails, returns NULL.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *po;
-	unsigned int i, j, s1_len, s2_len;
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	s1_len = 0;
-	while (s1[s1_len] != '\0')
-	{
-		s1_len++;
-	}
-	s2_len = 0;
-	while (s2[s2_len] != '\0')
-	{
-		s2_len++;
-	}
-	po = malloc(s1_len + n + 1);
-	if (po == NULL)
-	{
+	while (s1[i])
+		i++;
+	while (s2[k])
+		k++;
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
 		return (NULL);
-	}
-	i = 0;
-	while (s1[i] != '\0')
+	k = 0;
+	while (j < l)
 	{
-		po[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (j < n)
-	{
-		po[i] = s2[j];
-		i++;
+		if (j <= i)
+			str[j] = s1[j];
+
+		if (j >= i)
+		{
+			str[j] = s2[k];
+			k++;
+		}
 		j++;
 	}
-	po[i] = '\0';
-	return (po);
+	str[j] = '\0';
+	return (str);
 }
