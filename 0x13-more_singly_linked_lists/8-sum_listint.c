@@ -4,7 +4,7 @@
  * @head: pointer to head node
  * Return:  always successful
  */
-int sum_listin(listint_t *head)
+int sum_listint(listint_t *head)
 {
 	unsigned int sum;
 
