@@ -18,16 +18,15 @@ void print_binary(unsigned long int n)
 		if (n != check)
 		{
 			flag = 0;
-			write(1, "1", 1);
+			_putchar('0' + 1);
 		}
 		else if (!flag)
 		{
-			write(1, "0", 1);
+			_putchar(0 + '0');
 		}
 		n <<=  1;
 		count++;
 	}
 	if (flag == 1)
-		write(1, "0", 1);
-
+		_putchar(1 + '0');
 }
