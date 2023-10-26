@@ -11,7 +11,7 @@
  * check each individual value in b
  * if value isn't 0 or 1 return 0
  * else shift check one bit to the left
- * then if value at x is 1 perform XOR on check and count
+ * then if value at i is 1 perform XOR on check and count
  * return count
  */
 unsigned int binary_to_uint(const char *b)
@@ -23,17 +23,17 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	x = 0;
-	while (b[x] != '\0')
+	i = 0;
+	while (b[i] != '\0')
 	{
-		if (b[x] != '0' && b[x] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
 		count <<= 1;
-		if (b[x] == '1')
+		if (b[i] == '1')
 			count ^= check;
 
-		x++;
+		i++;
 	}
 	return (count);
 }
