@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- *
- *
+ * dlistint_len - return the length of a dlist
+ * @h: pointer to the head of a node
+ * Return: length of dlist
  */
 size_t dlistint_len(const dlistint_t *h)
 {
