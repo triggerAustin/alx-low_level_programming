@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdeff.h>
+#include <stddef.h>
 
 /**
  * struct hash_node_s - Node of a hash table
