@@ -20,11 +20,11 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (i == (ht->size - 1))
 			{
-				printf("%d'%s': '%s'", i, p->key, p->value);
+				printf("%ld'%s': '%s'", i, p->key, p->value);
 			}
 			else
 			{
-				printf("%d'%s': '%s', ", i, p->key, p->value);
+				printf("%ld'%s': '%s', ", i, p->key, p->value);
 			}
 			p = p->next;
 		}
