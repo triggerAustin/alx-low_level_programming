@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((unsigned char *) key, ht->size);
-	value_cp = strdup(value)
+	value_cp = strdup(value);
 
 	/* check if key exists*/
 	for (i = 0; ht->array[i]; i++)
