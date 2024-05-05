@@ -30,7 +30,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*add new node with node->value as value*/
 	new_hash_node = malloc(sizeof(hash_node_t));
 	if (!new_hash_node)
+	{
+		free(value_cp);
 		return (0);
+	}
 
 	new_hash_node->key = strdup(key);
 	if (!new_hash_node->key)
