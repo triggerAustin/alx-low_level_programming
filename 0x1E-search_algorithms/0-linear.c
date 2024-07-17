@@ -4,7 +4,7 @@ int linear_search(int *array, size_t size, int value)
 {
 	size_t i;
 
-	if (!array)
+	if (!array || array == NULL)
 	{
 		return -1;
 	}
