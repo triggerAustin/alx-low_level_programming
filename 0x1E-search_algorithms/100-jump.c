@@ -13,6 +13,8 @@ int jump_search(int *array, size_t size, int value)
 	int step = (int) sqrt((double)size);
 	int prev = 0, index = 0;
 
+	if (!array)
+		return (-1);
 	/**find range where value might be*/
 	do {
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
